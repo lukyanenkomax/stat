@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>d3graph</title>
+<script type="text/javascript" src="d3.v3.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script type="application/json" id="d3graph"> {
+    "links": [
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.megaplan_leads",
+            "target_label": "datasource.recruiting_leads_general",
+            "source": 12,
+            "target": 42
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.trm_ga_identified_leads",
+            "target_label": "datasource.megaplan_leads",
+            "source": 45,
+            "target": 12
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.trm_no_identified_leads",
+            "target_label": "datasource.megaplan_leads",
+            "source": 46,
+            "target": 12
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.trm_marketing_param",
+            "target_label": "datasource.megaplan_leads",
+            "source": 38,
+            "target": 12
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_leads_general",
+            "target_label": "report.recruiting_tac_data",
+            "source": 42,
+            "target": 20
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.trm_ga_identified_leads",
+            "target_label": "datasource.recruiting_leads_general",
+            "source": 45,
+            "target": 42
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.trm_no_identified_leads",
+            "target_label": "datasource.recruiting_leads_general",
+            "source": 46,
+            "target": 42
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_fact_source",
+            "target_label": "datasource.recruiting_general",
+            "source": 23,
+            "target": 34
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_fact_source",
+            "target_label": "report.recruiting_wom",
+            "source": 23,
+            "target": 21
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.megaplan_teachers",
+            "target_label": "datasource.recruiting_fact_source",
+            "source": 7,
+            "target": 23
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_general",
+            "target_label": "datasource.recruiting_practice_general",
+            "source": 34,
+            "target": 44
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_general",
+            "target_label": "report.adaptation_group_managers",
+            "source": 34,
+            "target": 8
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_general",
+            "target_label": "report.recruiting_conversion",
+            "source": 34,
+            "target": 11
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_general",
+            "target_label": "report.recruiting_conversion_by_channel",
+            "source": 34,
+            "target": 13
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_general",
+            "target_label": "report.recruiting_hours_utilisation",
+            "source": 34,
+            "target": 14
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_general",
+            "target_label": "report.recruiting_managers_kpi",
+            "source": 34,
+            "target": 15
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_general",
+            "target_label": "report.recruiting_month_plan_fact",
+            "source": 34,
+            "target": 16
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_general",
+            "target_label": "report.recruiting_native_conversion",
+            "source": 34,
+            "target": 17
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_general",
+            "target_label": "report.recruiting_stages",
+            "source": 34,
+            "target": 18
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_general",
+            "target_label": "report.recruiting_stages_term",
+            "source": 34,
+            "target": 19
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_general",
+            "target_label": "report.recruiting_tac_data",
+            "source": 34,
+            "target": 20
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.recruiting_general",
+            "target_label": "report.recruting_stages_common",
+            "source": 34,
+            "target": 22
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.megaplan_teachers",
+            "target_label": "datasource.recruiting_general",
+            "source": 7,
+            "target": 34
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.teacher",
+            "target_label": "datasource.recruiting_general",
+            "source": 32,
+            "target": 34
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.teacher_by_group_log",
+            "target_label": "report.adaptation_group_managers",
+            "source": 28,
+            "target": 8
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.teacher_group_by_manager_log",
+            "target_label": "report.adaptation_group_managers",
+            "source": 35,
+            "target": 8
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.recruiting_cost_fact",
+            "target_label": "report.recruiting_tac_data",
+            "source": 30,
+            "target": 20
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.recruiting_cost_plan",
+            "target_label": "report.recruiting_tac_data",
+            "source": 31,
+            "target": 20
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.trm_ga_identified_leads",
+            "target_label": "datasource.trm_no_identified_leads",
+            "source": 45,
+            "target": 46
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.get_ga_skyteach_job",
+            "target_label": "datasource.trm_ga_identified_leads",
+            "source": 29,
+            "target": 45
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.trm_marketing_param",
+            "target_label": "datasource.trm_ga_identified_leads",
+            "source": 38,
+            "target": 45
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.trm_marketing_param",
+            "target_label": "datasource.trm_no_identified_leads",
+            "source": 38,
+            "target": 46
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.megaplan_teachers",
+            "target_label": "debug.megaplan_fact_source",
+            "source": 7,
+            "target": 3
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.megaplan_teachers",
+            "target_label": "debug.megaplan_hour_v2",
+            "source": 7,
+            "target": 4
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.megaplan_teachers",
+            "target_label": "debug.megaplan_hours",
+            "source": 7,
+            "target": 5
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "cache.megaplan_adaptation",
+            "target_label": "entity.megaplan_teachers",
+            "source": 24,
+            "target": 7
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "cache.megaplan_recruiting",
+            "target_label": "entity.megaplan_teachers",
+            "source": 25,
+            "target": 7
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "cache.megaplan_skyteach",
+            "target_label": "entity.megaplan_teachers",
+            "source": 26,
+            "target": 7
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "cache.megaplan_adaptation",
+            "target_label": "datasource.adaptation_capacity",
+            "source": 24,
+            "target": 0
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.teacher_by_group_log",
+            "target_label": "datasource.adaptation_capacity",
+            "source": 33,
+            "target": 0
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "datasource.nps_recruiting_general",
+            "target_label": "datasource.recruiting_nps_tags",
+            "source": 27,
+            "target": 43
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.get_ga_skyteach_job",
+            "target_label": "datasource.ga_megaplan_trm_job",
+            "source": 29,
+            "target": 1
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.teachers_calendar_events",
+            "target_label": "datasource.tu2_calendar",
+            "source": 36,
+            "target": 2
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.train_lesson",
+            "target_label": "datasource.tu2_calendar",
+            "source": 37,
+            "target": 2
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "entity.video_logs",
+            "target_label": "debug.video_log_parallel",
+            "source": 39,
+            "target": 6
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "report.recruiting_agents_week",
+            "target_label": "report.recruiting_agents_month",
+            "source": 40,
+            "target": 10
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.0,
+            "source_label": "report.video_quality_metric_test_lesson_dataset",
+            "target_label": "report.ml_video_quality_test_lessons",
+            "source": 41,
+            "target": 9
+        }
+    ],
+    "nodes": [
+        {
+            "node_name": "datasource.adaptation_capacity",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "datasource.ga_megaplan_trm_job",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "datasource.tu2_calendar",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "debug.megaplan_fact_source",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "debug.megaplan_hour_v2",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "debug.megaplan_hours",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "debug.video_log_parallel",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "entity.megaplan_teachers",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.adaptation_group_managers",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.ml_video_quality_test_lessons",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruiting_agents_month",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruiting_conversion",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "datasource.megaplan_leads",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruiting_conversion_by_channel",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruiting_hours_utilisation",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruiting_managers_kpi",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruiting_month_plan_fact",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruiting_native_conversion",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruiting_stages",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruiting_stages_term",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruiting_tac_data",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruiting_wom",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruting_stages_common",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "datasource.recruiting_fact_source",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "cache.megaplan_adaptation",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "cache.megaplan_recruiting",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "cache.megaplan_skyteach",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "datasource.nps_recruiting_general",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "datasource.teacher_by_group_log",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "entity.get_ga_skyteach_job",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "entity.recruiting_cost_fact",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "entity.recruiting_cost_plan",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "entity.teacher",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "entity.teacher_by_group_log",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "datasource.recruiting_general",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "entity.teacher_group_by_manager_log",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "entity.teachers_calendar_events",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "entity.train_lesson",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "entity.trm_marketing_param",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "entity.video_logs",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.recruiting_agents_week",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "report.video_quality_metric_test_lesson_dataset",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "datasource.recruiting_leads_general",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "datasource.recruiting_nps_tags",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "datasource.recruiting_practice_general",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "datasource.trm_ga_identified_leads",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "datasource.trm_no_identified_leads",
+            "node_color": "#000080",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        }
+    ]
+}
+</script>
+<form>
+<h3> Link threshold 0 <input type="range" id="thersholdSlider" name="points" value=0 min="0" max="1.0" onchange="threshold(this.value)"> 1.0 </h3>
+</form>
+<script  src="d3graphscript.js"></script>
+</body>
+</html>
